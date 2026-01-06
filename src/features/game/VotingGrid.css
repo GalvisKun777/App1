@@ -1,0 +1,132 @@
+.voting-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation: fadeIn 0.5s ease;
+}
+
+.voting-grid__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.voting-grid__voter {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    margin: 0;
+}
+
+.voting-grid__voter strong {
+    color: white;
+    font-weight: 700;
+}
+
+.voting-grid__question {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.voting-grid__question-text {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.voting-grid__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin: 16px 0;
+}
+
+.voting-grid__players {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    padding: 8px 0;
+}
+
+.vote-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    animation: slideUp 0.5s ease backwards;
+}
+
+.vote-option:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.vote-option:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.vote-option:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.vote-option:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.vote-option:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.vote-option:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.vote-option:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.vote-option:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.vote-option__name {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

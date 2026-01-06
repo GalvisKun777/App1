@@ -1,0 +1,64 @@
+.text-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.text-input__label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.text-input__field {
+    width: 100%;
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.text-input__field::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.text-input__field:focus {
+    outline: none;
+    border-color: rgba(102, 126, 234, 0.8);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+.text-input__field--error {
+    border-color: rgba(245, 87, 108, 0.8);
+}
+
+.text-input__field--error:focus {
+    box-shadow: 0 0 20px rgba(245, 87, 108, 0.3);
+}
+
+.text-input__error {
+    color: #f5576c;
+    font-size: 13px;
+    margin-left: 4px;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

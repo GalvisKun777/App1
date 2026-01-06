@@ -1,0 +1,26 @@
+/**
+ * Game States - Finite State Machine
+ */
+export const GAME_STATES = {
+    SETUP: 'SETUP',
+    QUESTION_REVEAL: 'QUESTION_REVEAL',
+    TRANSITION: 'TRANSITION',
+    VOTING: 'VOTING',
+    RESULTS: 'RESULTS',
+    GAME_OVER: 'GAME_OVER'
+};
+
+/**
+ * Actions - Reducer Actions
+ */
+export const ACTIONS = {
+    ADD_PLAYER: 'ADD_PLAYER',
+    REMOVE_PLAYER: 'REMOVE_PLAYER',
+    SELECT_CATEGORY: 'SELECT_CATEGORY',
+    START_GAME: 'START_GAME',
+    NEXT_STEP: 'NEXT_STEP',
+    CAST_VOTE: 'CAST_VOTE',
+    SHOW_RESULTS: 'SHOW_RESULTS',
+    NEXT_ROUND: 'NEXT_ROUND',
+    RESTART: 'RESTART'
+};
